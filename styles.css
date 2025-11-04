@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: #141010;
+  color: #f5f5f5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Barra superior */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: linear-gradient(90deg, #e53935, #ff5252);
+  box-shadow: 0 2px 6px rgba(0,0,0,.4);
+}
+.brand { display: flex; align-items: baseline; gap: 10px; }
+.brand h1 { margin: 0; font-size: 20px; font-weight: 700; }
+.brand .subtitle { opacity: .8; font-size: 12px; }
+.top-actions { display: flex; gap: 8px; }
+.action {
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: none;
+  height: 32px; width: 36px;
+  display: grid; place-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.action:hover { background: rgba(255,255,255,.25); }
+
+/* Contenido */
+.content {
+  padding: 32px min(5vw, 42px) 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Buscador */
+.searchbox {
+  display: flex; gap: 8px;
+  width: min(700px, 100%);
+  margin: 0 auto 24px auto;
+}
+.searchbox input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #3c1c1c;
+  background: #1b0f0f;
+  color: #f5f5f5;
+}
+.searchbox button {
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid #e53935;
+  background: #e53935;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.searchbox button:hover { filter: brightness(1.15); }
+
+/* Grupos */
+.group { margin-top: 32px; }
+.group h2 { margin: 0 0 12px 6px; font-size: 20px; font-weight: 700; color: #ff5555; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+/* Tarjetas */
+.card {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: inherit;
+  padding: 14px;
+  background: #1e1515;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px;
+  transition: all .12s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #ff5555;
+  box-shadow: 0 8px 16px rgba(0,0,0,.4), 0 0 0 2px rgba(229,57,53,.25);
+}
+.icon {
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  background: #2c1b1b;
+  padding: 8px;
+}
+.icon[src] { object-fit: contain; }
+.text h3 { margin: 0 0 4px; font-size: 15px; font-weight: 600; }
+.text p { margin: 0; font-size: 13px; color: #b9b9b9; }
+
+.foot { text-align: center; opacity: .7; padding: 26px 10px; font-size: 12px; }
