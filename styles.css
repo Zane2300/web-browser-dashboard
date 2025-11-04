@@ -3,7 +3,9 @@ html, body { height: 100%; margin: 0; }
 
 body {
   font-family: 'Segoe UI', Roboto, sans-serif;
-  background: #141010;
+  /*background: #141010;*/
+  background: url("./assets/background-wallpapers.jpg") no-repeat center center fixed;
+  background-size: cover;
   color: #f5f5f5;
   -webkit-font-smoothing: antialiased;
 }
